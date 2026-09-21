@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Guess the secret number between 1 and 100 in as few tries as you can.">
+  <title>Number Guessing Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Number guessing game</h1>
+    <p>I'm thinking of a number between 1 and 100. Can you find it?</p>
+
+    <!-- Shows which numbers are still possible. It shrinks with every guess. -->
+    <div class="range" aria-hidden="true">
+      <div id="range-fill"></div>
+    </div>
+    <p id="range-label"></p>
+
+    <form id="guess-form">
+      <label for="guess">Your guess</label>
+      <div class="row">
+        <input id="guess" type="number" min="1" max="100" inputmode="numeric" required>
+        <button type="submit" id="guess-button">Guess</button>
+      </div>
+    </form>
+
+    <p id="feedback" role="status"></p>
+    <button type="button" id="new-game" hidden>Play again</button>
+
+    <p id="stats"></p>
+    <ul id="guess-list"></ul>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
